@@ -49,9 +49,7 @@ public final class SMPSpectate extends JavaPlugin {
 
     private static final int[] MIN_SUPPORTED_VERSION = {1, 19, 4};
 
-    // TODO: replace with SMPSpectate's real bStats plugin ID from
-    // https://bstats.org/what-is-my-plugin-id after registering the plugin there.
-    private static final int BSTATS_PLUGIN_ID = 0;
+    private static final int BSTATS_PLUGIN_ID = 33199;
 
     private final Map<UUID, Location> origins = new HashMap<>();
     private final Map<UUID, Collection<PotionEffect>> savedEffects = new HashMap<>();
