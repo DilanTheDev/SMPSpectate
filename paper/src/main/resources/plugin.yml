@@ -1,0 +1,32 @@
+name: SMPSpectate
+version: '1.0.0'
+main: dev.smspectate.SMPSpectate
+api-version: '1.19'
+description: SMP-friendly spectator mode with restrictions. (Paper/Purpur/Pufferfish build)
+author: SMPSpectate
+
+commands:
+  s:
+    description: Toggle spectator mode.
+    usage: /s
+    aliases: [spectate]
+  smspectate:
+    description: SMPSpectate admin command.
+    usage: /smspectate <reload|list|pull|version>
+
+permissions:
+  smspectate.use:
+    description: Allows using /s to toggle spectator mode.
+    default: true
+  smspectate.admin:
+    description: Allows use of /smspectate admin subcommands.
+    default: op
+  smspectate.bypass.distance:
+    description: Bypasses the max-distance restriction while spectating.
+    default: op
+  smspectate.bypass.ylimit:
+    description: Bypasses the max-y restriction while spectating.
+    default: op
+  smspectate.bypass.worldborder:
+    description: Bypasses the world border restriction while spectating.
+    default: op

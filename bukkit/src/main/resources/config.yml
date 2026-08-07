@@ -1,0 +1,12 @@
+blocked-worlds: []
+
+max-distance: 200
+max-y: 320
+enforce-world-border: true
+
+messages:
+  spectate-enter: "&7You are now in spectator mode. Type /s again to return."
+  spectate-exit: "&aWelcome back!"
+  restrict-distance: "&cYou strayed too far ({distance} blocks) from where you started spectating, {player}. Returning you."
+  restrict-ylimit: "&cYou reached the spectator height limit, {player}. Returning you."
+  restrict-border: "&cYou reached the world border while spectating, {player}. Returning you."
