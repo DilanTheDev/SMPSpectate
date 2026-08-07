@@ -22,6 +22,7 @@ import org.bukkit.plugin.java.JavaPlugin;
 import org.bukkit.potion.PotionEffect;
 import org.bukkit.potion.PotionEffectType;
 import org.bukkit.scheduler.BukkitRunnable;
+import org.bstats.bukkit.Metrics;
 
 import java.util.ArrayList;
 import java.util.Collection;
@@ -47,6 +48,10 @@ public final class SMPSpectate extends JavaPlugin {
     }
 
     private static final int[] MIN_SUPPORTED_VERSION = {1, 19, 4};
+
+    // TODO: replace with SMPSpectate's real bStats plugin ID from
+    // https://bstats.org/what-is-my-plugin-id after registering the plugin there.
+    private static final int BSTATS_PLUGIN_ID = 0;
 
     private final Map<UUID, Location> origins = new HashMap<>();
     private final Map<UUID, Collection<PotionEffect>> savedEffects = new HashMap<>();
@@ -82,6 +87,8 @@ public final class SMPSpectate extends JavaPlugin {
 
         saveDefaultConfig();
         loadConfigValues();
+
+        new Metrics(this, BSTATS_PLUGIN_ID);
 
         getCommand("s").setExecutor(new SpectateCommand());
         AdminCommand adminCommand = new AdminCommand();
